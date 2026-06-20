@@ -1,4 +1,4 @@
-name: Build & Deploy — Dev
+```name: Build & Deploy — Dev
 
 on:
   push:
@@ -49,7 +49,9 @@ jobs:
             .
 
       - name: Push Docker Image
+
         run: docker push ghcr.io/zawthanoo/payment-service:${{ steps.tag-version.outputs.version }}
+        run: docker push ghcr.io/phyusinthaw09/payment-service:${{ steps.tag-version.outputs.version }}
       - name: Checkout Kustomize chart Repository
         uses: actions/checkout@v4
         with:
@@ -70,4 +72,4 @@ jobs:
       #     changes: |
       #       {
       #         "images[0].newTag": "${{ steps.tag-version.outputs.version }}"
-      #       }
+      #       }```
