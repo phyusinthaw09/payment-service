@@ -63,4 +63,8 @@ jobs:
         with:
           repository: zawthanoo/workshop-apps
           path: deployment
+<<<<<<< HEAD
           token: ${{ secrets.MY_GITHUB_TOKEN }}
+=======
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
+>>>>>>> 30753daf3d2083934c1bde6ff499384d416e906d
